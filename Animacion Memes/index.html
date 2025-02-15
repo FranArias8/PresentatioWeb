@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AriasCeoWebs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="button" onclick="openUrl()">
+        <img src="Assets/telegram.svg" alt="Button Icon" class="button-icon">
+    </button>
+    <button class="button" onclick="openAnotherUrl()">
+        <img src="Assets/twitter.svg" alt="Another Button Icon" class="button-icon">
+    </button>
+    <h1>🌐Arias Ceo Webs🌐</h1>
+    <h2>I am AriasCeo👋, and I make webs for crypto projects</h2>
+    <h3>Contact me via telegram if you are interested.</h3>
+    <div>
+        <img src="Assets/header.png" alt="Header" class="heart">
+    </div>
+    <div class="content">
+        <!-- Sección de Testimonios -->
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <img src="Assets/client.png" alt="Cliente 1" class="testimonial-image">
+                <div class="author">@FKPe6V</div>
+                <p>Thanks to AriasCeo my memecoin reached 30K in mk</p>
+            </div>
+            <div class="testimonial">
+                <img src="Assets/client.png" alt="Cliente 2" class="testimonial-image">
+                <div class="author">@EzUywY</div>
+                <p>Having a website for your coin DOES make a difference💪</p>
+            </div>
+            <!-- Añade más testimonios según sea necesario -->
+        </section>
+    </div>
+
+    <script>
+        function openUrl() {
+            window.open('https://t.me/AriasCeoWebs', '_blank');
+        }
+        function openAnotherUrl() {
+            window.open('https://x.com/AriasCeo', '_blank');
+        }
+
+        // Añadir animación al hacer scroll
+        window.addEventListener('scroll', function() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            testimonials.forEach(testimonial => {
+                const rect = testimonial.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    testimonial.classList.add('animate');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

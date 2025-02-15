@@ -1,0 +1,170 @@
+body {
+    background: radial-gradient(circle, #000000, #555555); /* Gradiente radial de negro a gris */
+    background-position: center center; /* Comienza desde el centro de la página */
+    background-size: cover; /* Asegura que el gradiente cubra toda la página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Comic Sans MS', sans-serif; /* Añadir la fuente Comic Sans MS */
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Necesario para la posición absoluta del botón */
+    overflow-y: auto; /* Permitir el scroll vertical */
+}
+
+h1 {
+    font-size: 4rem; /* Ajustar el tamaño del texto */
+    color: #FFFFFF; /* Color blanco para el texto */
+}
+
+h1, h2, h3 {
+    margin-top: 20px; /* Añadir margen superior */
+    margin-bottom: 20px;
+    color: #FFFFFF; /* Color blanco para el texto */
+}
+
+.heart {
+    font-size: 10rem;
+    color: #ff69b4; /* Rosa vibrante */
+    animation: heart 3s infinite alternate linear; /* Añadir la animación */
+}
+
+@keyframes heart {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para los botones */
+.button {
+    position: absolute; /* Posición absoluta */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* Ajusta el tamaño del botón */
+    height: 70px; /* Ajusta el tamaño del botón */
+    background: linear-gradient(135deg, #ffffff, #cccccc); /* Gradiente de blanco a gris */
+    border: 3px solid #FFFFFF; /* Añadir borde blanco */
+    border-radius: 50%; /* Hacer el botón circular */
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.3s ease; /* Añadir transición para la animación */
+    color: white;
+    padding: 0;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #000000, #555555, #000000); /* Gradiente invertido de gris a blanco para el hover */
+    transform: scale(0.9); /* Añadir animación de escala */
+}
+
+.button-icon {
+    width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+/* Posicionar los botones */
+.button:nth-child(1) {
+    right: 100px; /* Ajusta la distancia desde la parte derecha para el primer botón */
+}
+
+.button:nth-child(2) {
+    right: 20px; /* Ajusta la distancia desde la parte derecha para el segundo botón */
+}
+
+.content {
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+/* Testimonios */
+.testimonials {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 3rem; /* Ajustar el tamaño del texto a 3 rem */
+}
+
+.testimonial {
+    background: linear-gradient(135deg, #000000, #555555, #000000); /* Gradiente de blanco a gris */
+    border: 3px solid #FFFFFF; /* Añadir borde blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    max-width: 300px;
+    position: relative; /* Necesario para posicionar la imagen */
+    text-align: left; /* Alinear el texto a la izquierda */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out, transform 3s ease-in-out; /* Transición para la animación */
+}
+
+.testimonial.animate {
+    opacity: 1; /* Mostrar cuando se añade la clase animate */
+    transform: translateY(0); /* Restablecer la posición */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial img.testimonial-image {
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.testimonial .author {
+    display: inline-block;
+    margin-left: 70px; /* Espacio a la izquierda para la imagen */
+    font-weight: bold;
+    vertical-align: top; /* Alinear verticalmente con la imagen */
+}
+
+.testimonial p {
+    font-style: 'Comic Sans MS', sans-serif; /* Añadir la fuente Comic Sans MS */
+    margin-top: 60px; /* Ajustar margen superior para mover el texto más abajo */
+}
+
+/* Redes Sociales */
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff69b4;
+}
+
+h2::after {
+    content: " 🚀";
+}
+
+h3::after {
+    content: " 📞";
+}
